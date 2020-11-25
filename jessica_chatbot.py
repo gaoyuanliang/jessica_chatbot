@@ -4,10 +4,9 @@ https://chatterbot.readthedocs.io/en/stable/quickstart.html#training-your-chatbo
 '''
 
 from chatterbot import ChatBot
-from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot.trainers import ListTrainer
 
-chatbot = ChatBot('Ron Obvious')
+chatbot = ChatBot("Jessica Liang")
 
 trainer = ChatterBotCorpusTrainer(chatbot)
 
