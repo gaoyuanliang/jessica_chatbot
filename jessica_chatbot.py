@@ -25,6 +25,7 @@ for c in conversations:
 		trainer.train(c)
 
 #test the model
-response = chatbot.get_response("Do you ever get lonely")
-print(response)
+while True:
+	response = chatbot.get_response(input())
+	print(response)
 #########jessica_chatbot.py########
