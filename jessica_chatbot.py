@@ -18,7 +18,16 @@ re_sentenece = r'(\- ){1,2}(?P<sentence>[^\n]+)\n'
 conversations = [[t.group('sentence') for t in re.finditer(re_sentenece, c.group())] \
 for c in re.finditer(re_conversation, open('corpus.yml').read())]
 
+
+conversations_takalam = [[t.group('sentence') for t in re.finditer(re_sentenece, c.group())] \
+for c in re.finditer(re_conversation, open('takalam.yml').read())]
+
 #train the model
+for c in conversations_takalam:
+	print('training by :\t%s'%(str(c)))
+	for i in range(10):
+		trainer.train(c)
+
 for c in conversations:
 	print('training by :\t%s'%(str(c)))
 	for i in range(4):
