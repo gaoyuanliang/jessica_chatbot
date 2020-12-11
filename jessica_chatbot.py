@@ -7,7 +7,6 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 
 chatbot = ChatBot("Jessica Liang")
-trainer = ChatterBotCorpusTrainer(chatbot)
 trainer = ListTrainer(chatbot)
 
 re_conversation = r'\n\- \- [^\n]+\n'\
