@@ -21,11 +21,13 @@ for c in re.finditer(re_conversation, open('corpus.yml').read())]
 
 #train the model
 for c in conversations:
-	for i in range(10):
+	print('training by :\t%s'%(str(c)))
+	for i in range(4):
 		trainer.train(c)
 
 #test the model
 while True:
-	response = chatbot.get_response(input())
+	text = input()
+	response = chatbot.get_response(text)
 	print(response)
 #########jessica_chatbot.py########
